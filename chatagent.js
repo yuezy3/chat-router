@@ -13,7 +13,7 @@ async function agent(chatid, msg) {
     let chatback = await fetch(`https://chat-agent.onlybot.club/api/chat`, requestOptions)
         .then(response => response.json())
         .catch(error => console.log('error', error));
-    console.log(`chatback ${chatback}`);
+    console.log(`chatback ${JSON.stringify(chatback)}`);
     return { id: chatid, msg: `echo: ${chatback.msg}` };
 }
 
