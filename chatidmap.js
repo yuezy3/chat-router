@@ -27,11 +27,13 @@ async function obj2id(chatinfo){
     const id = hash.digest('hex');
     chatidtable[id] = chatinfo;
     await db.write();
+    console.log(`write ${id}`);
 
     return {id}
 }
 
 async function id2obj(chatid){
+    console.log(`read ${chatid}`);
     return chatidtable[chatid];
 }
 
