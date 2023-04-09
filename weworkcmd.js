@@ -34,7 +34,6 @@ async function send(chatobj, msg) {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
-    res.send("OK");
 
 }
 export { send };
