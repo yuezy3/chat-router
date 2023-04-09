@@ -1,7 +1,7 @@
 
 
 async function agent (chatid, msg) {
-    return {id:chatid, msg:`echo: ${mesg}`};
+    return {id:chatid, msg:`echo: ${msg}`};
 }
 
 export {agent};
