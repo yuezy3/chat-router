@@ -26,6 +26,7 @@ async function obj2id(chatinfo){
     hash.update(str);
     const id = hash.digest('hex');
     chatidtable[id] = chatinfo;
+    await db.write();
 
     return {id}
 }
