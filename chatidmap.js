@@ -29,7 +29,7 @@ async function obj2id(chatinfo){
     await db.write();
     console.log(`write ${id}`);
 
-    return {id}
+    return id;
 }
 
 async function id2obj(chatid){
