@@ -11,8 +11,8 @@ try {
 const adapter = new JSONFile('db.json');
 const db = new Low(adapter);
 await db.read();
-db.data = db.data || { chatid: {} }; //chat obj: {"chatid1":{//this id content}, "chatid2"...}
-const {chatidtable} = db.data;
+db.data = db.data || { }; //chat obj: {"chatid1":{//this id content}, "chatid2"...}
+const chatidtable = db.data;
 
 async function obj2id(chatinfo){
     const str = 
