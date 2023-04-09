@@ -7,7 +7,7 @@ async function send(chatobj, msg) {
     if(chatobj.roomType == 1 || chatobj.roomType == 3){
         receiver = chatobj.groupRemark || chatobj.groupName;
       }else{
-        reveiver = chatobj.receivedName;
+        receiver = chatobj.receivedName;
       };
 
     //send data to client
@@ -20,7 +20,7 @@ async function send(chatobj, msg) {
                 "type": 203,
                 "titleList": [receiver],
                 "receivedContent": msg,
-                "atList": chatobj.atMe?[reveiver]:null
+                "atList": chatobj.atMe?[receiver]:null
             }
         ]
     });
