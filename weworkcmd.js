@@ -4,6 +4,7 @@ const robot_id = process.env.ROBOT_ID;
 
 async function send(chatobj, msg) {
     let receiver;
+    //roomType integer 必需 QA所在房间类型 1=外部群 2=外部联系人 3=内部群 4=内部联系人
     if(chatobj.roomType == 1 || chatobj.roomType == 3){
         receiver = chatobj.groupRemark || chatobj.groupName;
       }else{
@@ -20,7 +21,7 @@ async function send(chatobj, msg) {
                 "type": 203,
                 "titleList": [receiver],
                 "receivedContent": msg,
-                "atList": chatobj.atMe?[receiver]:null
+                "atList": chatobj.atMe?[chatobj.receivedName]:null
             }
         ]
     });
