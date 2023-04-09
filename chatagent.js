@@ -11,7 +11,7 @@ async function agent(chatid, msg) {
         redirect: 'follow'
     };
     let chatback = await fetch(`https://chat-agent.onlybot.club/api/chat`, requestOptions)
-        .then(response => response.text())
+        .then(response => response.json())
         .catch(error => console.log('error', error));
     console.log(`chatback ${chatback}`);
     return { id: chatid, msg: `echo: ${chatback.msg}` };
