@@ -32,7 +32,7 @@ app.post("/chatapi/chat", async (req, res) => {
     }};
   chatagent.agent(chatid, data.spoken).then(async(r)=>{
     console.log(r);
-    const chatinfo = await chatidmap.id2obj(r.id);
+    const chatinfo = await chatidmap.id2obj(r.chatid);
     return await weworkcmd.send(chatinfo, r.msg);
   }).then(r=>{console.log("chatgpt response send!")}).catch(e=>console.log(e));
   res.send(JSON.stringify(resdata));

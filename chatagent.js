@@ -14,7 +14,7 @@ async function agent(chatid, msg) {
         .then(response => response.json())
         .catch(error => console.log('error', error));
     console.log(`chatback ${JSON.stringify(chatback)}`);
-    return { id: chatid, msg: `echo: ${chatback.msg}` };
+    return { chatid: chatid, msg: `echo: ${chatback.msg}` };
 }
 
 export { agent };
