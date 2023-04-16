@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 const robot_id = process.env.ROBOT_ID;
 
 app.get('/', (req, res) => {
-  res.send('Hello World! test updating');
+  res.send('Hello World! test updating, now on hongkong!!');
 })
 
 // for chat from client
