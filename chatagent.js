@@ -1,4 +1,5 @@
 // post to https://chat-agent.onlybot.club/api/chat with application/json of {id:"", msg:""}
+import fetch, {Headers, } from 'node-fetch';
 
 async function agent(chatid, msg) {
     let myHeaders = new Headers();

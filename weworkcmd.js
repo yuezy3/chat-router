@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import fetch, {Headers, } from 'node-fetch';
 dotenv.config();
 const robot_id = process.env.ROBOT_ID;
 
